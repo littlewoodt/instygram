@@ -31,3 +31,11 @@
 .feature {
 	max-width: 600px;
 }
+
+nav {
+	text-align: right;
+}
+
+ul {
+	text-decoration: none;
+}
