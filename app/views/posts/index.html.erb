@@ -1,0 +1,8 @@
+<h1>instantgramme</h1>
+
+<% @posts.each do |post| %>
+	<%= link_to(image_tag(post.image, :class => 'thumb'), post) %>
+	<p><%= post.title %></p>
+	<p><%= post.content %></p>
+
+<% end %>
