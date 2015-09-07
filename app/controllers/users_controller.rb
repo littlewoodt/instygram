@@ -17,23 +17,23 @@ class UsersController < ApplicationController
   end
 
   def edit
-  	@user = User.find params[:id]
+  	@user = @current_user
   end
 
   def update
-  	user = User.find params[:id]
+  	user = @current_user
   	user.update user_params
   	redirect_to users_path
   end
 
   def destroy
-  	user = User.find params[:id]
+  	user = User.find params[:id] # maybe change
   	user = user.destroy
   	redirect_to users_path
   end
 
   private
   def user_params
-  	params.require(:user).permit(:username, :name, :email, :password) #, :password_confirmation
+  	params.require(:user).permit(:username, :name, :email, :password, :password_confirmation)
   end
 end
