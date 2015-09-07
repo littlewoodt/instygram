@@ -1,22 +1,12 @@
 Rails.application.routes.draw do
 
+  root :to => 'posts#index'
+  get 'users/edit' => 'users#edit', :as => :edit_user
   resources :posts, :users
 
-  root :to => 'posts#index'
-
-  # get 'posts/index'
-
-  # get 'posts/edit'
-
-  # get 'posts/new'
-
-  # get 'posts/show'
-
-  # get 'users/index'
-
-  # get 'users/edit'
-
-  # get 'users/new'
+  get '/login' => 'session#new'
+  post '/login' => 'session#create'
+  delete '/login' => 'session#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
