@@ -4,5 +4,6 @@
 	<%= link_to(image_tag(post.image, :class => 'thumb'), post) %>
 	<p><%= post.title %></p>
 	<p><%= post.content %></p>
-
+	<p><%= post.user.name if post.user %></p>
 <% end %>
+	

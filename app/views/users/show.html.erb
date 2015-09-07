@@ -6,6 +6,10 @@
 	<li>Email: <%= @user.email %></li>
 </ul>
 
+<% @user.posts.each do |post| %>
+	<%= image_tag post.image, :class => 'thumb' %>
+<% end %>
+
 <div class="controls">
 	<%= link_to 'Edit', edit_user_path(@user) %>
 	<%= link_to 'Delete', @user, :method => 'delete', :data => { :confirm => "Are you sure?" } %>
