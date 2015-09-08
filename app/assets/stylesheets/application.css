@@ -14,28 +14,10 @@
  *= require_self
  */
 
- body {
- 	font-family: helvetica, sans-serif;
- 	text-align: center;
- }
 
 .container {
-	margin: 0 auto;
 	max-width: 960px;
+	margin: 0 auto;
+/*	text-align: center;
 }
 
-.thumb {
-	max-width: 300px;
-}
-
-.feature {
-	max-width: 600px;
-}
-
-nav {
-	text-align: right;
-}
-
-ul {
-	text-decoration: none;
-}

@@ -1,9 +1,15 @@
-<h1>instantgramme</h1>
+<h2>instantgramme</h2>
+
+<div class="posts">
 
 <% @posts.each do |post| %>
-	<%= link_to(image_tag(post.image, :class => 'thumb'), post) %>
-	<p><%= post.title %></p>
-	<p><%= post.content %></p>
-	<p><%= post.user.name if post.user %></p>
+	<div class="post">
+		<h4><%= post.title %></h4>
+		<%= link_to(image_tag(post.image, :class => 'thumb'), post) %>
+		<p><b><%= post.user.name if post.user %></b> <%= post.content %></p>
+		
+	</div>
 <% end %>
+
+</div>
 	
