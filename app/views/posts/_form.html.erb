@@ -11,6 +11,14 @@
 	<%= f.label :image %>
 	<%= f.url_field :image %>
 </p>
+<p>
+	<%= label_tag "Your image: " %>
+	<%= cl_image_upload_tag :file %>
+</p>
+<p>
+	<%= label_tag "Number of Likes: " %>
+	<%= number_field_tag :like_count %>
+</p>
 
 <%= f.submit %>
 <% end %>

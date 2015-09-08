@@ -1,10 +1,10 @@
 class PostsController < ApplicationController
   def index
-  	@posts = Post.all
+  	@posts = Post.order( :created_at ).reverse_order
   end
 
   def show
-	@post = Post.find params[:id]
+    @post = Post.find params[:id]
   end
 
   def new
@@ -12,9 +12,26 @@ class PostsController < ApplicationController
   end
 
   def create
-  	@post = Post.create post_params
-    @current_user.posts << @post
-  	redirect_to posts_path
+    if post_params[:image].present?
+    	@post = Post.create post_params
+      @current_user.posts << @post
+    	redirect_to posts_path
+
+    elsif post_params[:image_url].present?
+      response = Cloudinary::Uploader.upload params[:file]
+
+      post_details = post_params()
+      post_details[:image_url] = response["url"]
+      Post.create post_details
+      @post = post_details
+      @current_user.posts << @post
+
+      redirect_to posts_path
+    else
+      flash[:message] = "Cant be blank"
+      redirect_to new_post_path
+    end
+    #flash[:message] = nil   
   end
 
   def edit
@@ -35,7 +52,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-  	params.require(:post).permit(:title, :image, :content, :user_id)
+  	params.permit(:title, :image, :content, :user_id, :image_url, :like_count)
   end
 
 end

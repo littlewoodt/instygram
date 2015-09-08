@@ -3,11 +3,15 @@
 <div class="posts">
 
 <% @posts.each do |post| %>
-	<div class="post">
+	<div class="post" id="post-<%= post.id %>">
 		<h4><%= post.title %></h4>
-		<%= link_to(image_tag(post.image, :class => 'thumb'), post) %>
-		<p><b><%= post.user.name if post.user %></b> <%= post.content %></p>
-		
+		<% if post.image.present? %>
+			<%= link_to(image_tag(post.image, :class => 'thumb'), post) %>
+		<% else %>
+			<%= link_to(image_tag(post.image_url, :class => 'thumb'), post) %>
+		<% end %>
+			<p><b><%= post.user.name if post.user %></b> <%= post.content %></p>
+			<p>It has <%= post.like_count %> likes.</p>
 	</div>
 <% end %>
 

@@ -27,5 +27,11 @@
 
 </div>
 
+<footer>
+<% if flash[:message].present? %>
+  <p><%= flash[:message] %></p>
+<% end %>
+</footer>
+
 </body>
 </html>

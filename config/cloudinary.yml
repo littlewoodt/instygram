@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: desfnbkj1
+  api_key: '513412987711381'
+  api_secret: MvjdV06P5mGCtCiR78rRvbL0CEY
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: desfnbkj1
+  api_key: '513412987711381'
+  api_secret: MvjdV06P5mGCtCiR78rRvbL0CEY
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: desfnbkj1
+  api_key: '513412987711381'
+  api_secret: MvjdV06P5mGCtCiR78rRvbL0CEY
+  enhance_image_tag: true
+  static_image_support: false
