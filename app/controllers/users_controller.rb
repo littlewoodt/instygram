@@ -32,6 +32,21 @@ class UsersController < ApplicationController
   	redirect_to users_path
   end
 
+  def followed
+    @followed = @current_user.active_relationships
+    render :followed
+  end
+
+  def follow
+    @current_user.active_relationships.create(followed_id: params[:id])
+    redirect_to followed_path
+  end
+
+  def unfollow
+    @current_user.active_relationships.find_by(followed_id: params[:id]).destroy
+    redirect_to followed_path
+  end
+
   private
   def user_params
   	params.require(:user).permit(:username, :name, :email, :password, :password_confirmation)

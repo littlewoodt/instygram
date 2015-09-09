@@ -12,6 +12,11 @@
 		<% end %>
 			<p><b><%= post.user.name if post.user %></b> <%= post.content %></p>
 			<p>It has <%= post.like_count %> likes.</p>
+		<% unless @current_user.following.include?(post.user) %>
+			<%= link_to "Follow #{post.user.name.capitalize}", follow_path(post.user.id) %>
+		<% else %>
+			<%= link_to "Unfollow #{post.user.name.capitalize}", unfollow_path(post.user.id) %>
+		<% end %>
 	</div>
 <% end %>
 

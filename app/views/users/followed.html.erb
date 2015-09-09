@@ -1,0 +1,13 @@
+<h1>You are on the followed users page!</h1>
+
+<% unless @followed.empty? %>
+	<ul>
+		<% @followed.each do |relationship| %>
+			<li>
+				<% u = User.find relationship.followed_id %>
+				<%= u.name %>
+				<%= link_to "Unfollow User", unfollow_path(u.id) %>
+			</li>
+		<% end %>
+	</ul>
+<% end %>

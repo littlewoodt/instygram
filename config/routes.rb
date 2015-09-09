@@ -2,6 +2,9 @@ Rails.application.routes.draw do
 
   root :to => 'posts#index'
   get 'users/edit' => 'users#edit', :as => :edit_user
+  get 'users/followed' => 'users#followed', as: 'followed'
+  get 'users/follow/:id' => 'users#follow', as: 'follow'
+  get 'users/unfollow/:id' => 'users#unfollow', as: 'unfollow'
   resources :posts, :users
 
   get '/login' => 'session#new'

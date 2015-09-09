@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :check_if_logged_in
+  
   def index
   	@posts = Post.order( :created_at ).reverse_order
   end
@@ -47,6 +49,10 @@ class PostsController < ApplicationController
   	post = Post.find params[:id]
   	post = post.destroy
   	redirect_to posts_path
+  end
+
+  def check_if_logged_in
+    redirect_to login_path unless @current_user.present?
   end
 
   private
