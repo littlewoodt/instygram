@@ -17,13 +17,12 @@ class PostsController < ApplicationController
       @current_user.posts << @post
     	redirect_to posts_path
 
-    elsif post_params[:image_url].present?
+    elsif params[:file].present?
       response = Cloudinary::Uploader.upload params[:file]
 
       post_details = post_params()
       post_details[:image_url] = response["url"]
-      Post.create post_details
-      @post = post_details
+      @post = Post.create post_details
       @current_user.posts << @post
 
       redirect_to posts_path

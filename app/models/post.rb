@@ -9,6 +9,8 @@
 #  created_at :datetime
 #  updated_at :datetime
 #  user_id    :integer
+#  image_url  :text
+#  like_count :integer
 #
 
 class Post < ActiveRecord::Base
