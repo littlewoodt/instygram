@@ -1,6 +1,10 @@
 <h2><%= @post.title %></h2>
 
-<%= image_tag @post.image, :class => 'feature' %>
+<% if @post.image.present? %>
+	<%= image_tag(@post.image, :class => 'feature') %>
+<% else %>
+	<%= image_tag(@post.image_url, :class => 'feature') %>
+<% end %>
 
 <p><%= @post.content %></p>
 

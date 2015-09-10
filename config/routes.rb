@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root :to => 'posts#index'
+  get 'posts/index' => 'posts#like'
   get 'users/edit' => 'users#edit', :as => :edit_user
   get 'users/followed' => 'users#followed', as: 'followed'
   get 'users/follow/:id' => 'users#follow', as: 'follow'

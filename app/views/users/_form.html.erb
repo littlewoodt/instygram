@@ -1,24 +1,26 @@
 <%= form_for @user do |f| %>
 <p>
-	<%= f.label :username %>
-	<%= f.text_field :username %>
+	<%= f.label :username, nil %> 
+	<%= f.text_field :username, :placeholder => 'enter your username' %>
 </p>
 <p>
-	<%= f.label :name %>
-	<%= f.text_field :name %>
+	<%= f.label :name, nil %>
+	<%= f.text_field :name, :placeholder => 'enter your name' %>
 </p>
 <p>
-	<%= f.label :email %>
-	<%= f.email_field :email %>
+	<%= f.label :email, nil %>
+	<%= f.email_field :email, :placeholder => 'joel@chicken.com' %>
 </p>
 <p>
-	<%= f.label :password %>
-	<%= f.password_field :password %>
+	<%= f.label :password, nil %>
+	<%= f.password_field :password, :placeholder => 'enter your password' %>
 </p>
 <p>
-	<%= f.label :password_confirmation %>
-	<%= f.password_field :password_confirmation %>
+	<%= f.label :password_confirmation, nil %>
+	<%= f.password_field :password_confirmation, :placeholder => 'confirm your password' %>
 </p>
 
 <%= f.submit %>
 <% end %>
+
+
