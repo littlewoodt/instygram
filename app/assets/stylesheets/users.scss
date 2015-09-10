@@ -1,3 +1,55 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background: #fafafa;
+  font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  color: #435051;
+}
+
+.containerleft {
+	max-width: 960px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.window {
+  position: relative;
+  background: #435051;
+  width: 400px;
+  min-height: 400px;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 15px;
+}
+
+input {
+  width: 50%;
+  padding: 5px;
+  border-radius: 5px;
+  color: #435051;
+  background: white;
+  border: none;
+}
+
+input[type="submit"] {
+  font-family: helvetica, sans-serif;
+  border: 0;
+  background: #222222;
+  color: #fffff7;
+  width: 25%;
+  height: 25px;
+  padding: 5px;
+  border-radius: 10px;
+  z-index: 10000;
+  margin: 5px;
+}
+
+input[type="submit"]:hover {
+	background: black;
+	color: white;
+	transition: all .5s;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+}
+

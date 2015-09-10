@@ -57,15 +57,13 @@ class PostsController < ApplicationController
 
   def like
     @post = Post.find params[:id]
-    like_count = 1
-    if like_count > 0
-      puts 'like'
-    end
+    like = "liked"
+    render :like
   end
 
   private
   def post_params
-  	params.permit(:title, :image, :content, :user_id, :image_url, :like_count)
+  	params.permit(:title, :image, :content, :user_id, :image_url, :like)
   end
 
 end

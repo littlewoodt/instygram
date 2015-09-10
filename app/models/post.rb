@@ -11,6 +11,7 @@
 #  user_id    :integer
 #  image_url  :text
 #  like_count :integer
+#  like       :text
 #
 
 class Post < ActiveRecord::Base

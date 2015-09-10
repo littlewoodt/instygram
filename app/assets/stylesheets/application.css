@@ -18,6 +18,13 @@
 	margin: 0 auto;
 	text-align: center;
 }
+
+.containerleft {
+	max-width: 960px;
+	margin: 0 8.33%;
+	text-align: left;
+}
+
  nav {
 	height: 40px;
 	line-height: 40px;
@@ -29,9 +36,9 @@ footer {
 	left: 0px;
 	bottom: 0px;
 	width: 100%;
-	background: #fafafa;
 	text-align: center;
 }
+
 a { 
 	color: #6A5BA6;
 	font-size: .8em;
@@ -47,14 +54,3 @@ a:hover {
 ul {
 	list-style-type: none;
 }
-
-.navbar nav {
-	text-align: center;
-	height: 40px;
-	line-height: 40px;
-	margin: auto 8.33%;
-}
-#right {
-	color: black;
-}
-

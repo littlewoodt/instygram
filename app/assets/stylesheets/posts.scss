@@ -8,6 +8,16 @@ body {
   color: #435051;
 }
 
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.thumb {
+	display: block;
+	margin: 0 auto;
+}
+
 .window {
   position: relative;
   background: #435051;
@@ -16,11 +26,30 @@ body {
   margin: 0 auto;
   padding-top: 60px;
   padding-bottom: 15px;
+  border-radius: 10px;
+}
+
+.windowwhite {
+  position: relative;
+  top: -150px;
+  background: white;
+  width: 300px;
+  min-height: 300px;
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 15px;
+  border-radius: 5px;
 }
 
 .posts {
   width: 400px;
   margin: 0 auto;
+  display: block;
+  position: relative;
+}
+
+.post a {
+	padding: 0;
 }
 
 .post {
@@ -28,16 +57,22 @@ body {
   padding: 10px;
   margin-bottom: 20px;
   border-radius: 5px;
+  position: relative;
+  text-align: left;
 }
 
 .thumb {
-  max-width: 380px;
-  min-width: 380px;
+  max-width: 360px;
+  min-width: 360px;
+  margin: 0 auto;
 }
 
 .feature {
-	max-width: 640px;
+	max-width: 800px;
+	margin: 0 auto;
+
 }
+
 .window label {
 	display: block;
 	min-width: 16.667%;
@@ -45,8 +80,17 @@ body {
 	font-size: .8em;
 	padding: 10px;
 	color: black;
-
 }
+
+.windowwhite label {
+	display: block;
+	min-width: 16.667%;
+	text-align: center;
+	font-size: .8em;
+	padding: 10px;
+	color: black;
+}
+
 input {
 	width: 50%;
 	padding: 5px;
@@ -54,6 +98,15 @@ input {
 	color: #435051;
 	background: white;
 	border: none;
+}
+
+.windowwhite input {
+	width: 66.667%;
+	padding: 5px;
+	border-radius: 5px;
+	color: #435051;
+	background: white;
+	border: 1px inset #435051;
 }
 
 input[type="submit"] {
@@ -76,4 +129,21 @@ input[type="submit"]:hover {
 	-webkit-transition: all 1s;
 	-moz-transition: all 1s;
 }
+.windowwhite .gallery img {
+	max-width: 100px;
+	margin: 0 auto;
+ }
 
+ .postentry {
+	position: relative;
+	margin: 0 auto;
+	bottom: 0px;
+	left: 50%;
+	margin-left: -200px;
+	width: 400px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: #435051;
+	text-align: center;
+	border-radius: 5px;
+}

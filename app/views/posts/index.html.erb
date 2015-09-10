@@ -1,4 +1,7 @@
-<!---<h2>instantgramme</h2>-->
+
+<div class="container">
+
+<h2>instantgramme</h2>
 
 <div class="posts">
 
@@ -11,7 +14,10 @@
 			<%= link_to(image_tag(post.image_url, :class => 'thumb'), post) %>
 		<% end %>
 			<p><b><%= post.user.name if post.user %></b> <%= post.content %></p>
-			<p><%= link_to "Like", follow_path(post.user.id) %></p>
+			<%= link_to "Like", posts_path(post.like) %>
+			<% if post.user.name == @current_user.name %>
+				<%= link_to('Delete', post, :method => 'delete', :data => { :confirm => 'Are you sure?' } ) %>
+			<% end %>
 		<% unless @current_user.following.include?(post.user) %>
 			<%= link_to "Follow #{post.user.name.capitalize}", follow_path(post.user.id) %>
 		<% else %>
@@ -20,7 +26,9 @@
 	</div>
 <% end %>
 
-<footer>
+</div>
+
+<div class="postentry">
 <%= form_tag "/posts", multipart: true do %>
 
 <p>
@@ -38,4 +46,4 @@
 
   <%= submit_tag "Create Post" %>
 <% end %>
-</footer>
+</div>
