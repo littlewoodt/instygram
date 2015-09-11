@@ -2,21 +2,20 @@
 
 	<h2>instantgramme</h2>
 
-		<% if @post.image.present? %>
-			<%= image_tag(@post.image) %>
-		<% else %>
-			<%= image_tag(@post.image_url) %>
-		<% end %>
+	<% if @post.image.present? %>
+		<%= image_tag(@post.image, :class => 'feature') %>
+	<% else %>
+		<%= image_tag(@post.image_url, :class => 'feature') %>
+	<% end %>
 
 	<div class="windowwhite">
 
 		<%= render :partial => 'form' %>
 
 		<div class="controls">
-			<%= link_to('Delete', @post, :method => 'delete', :data => { :confirm => 'Are you sure?' } ) %>
-			<%= link_to 'Edit', edit_post_path(@post) %>
+			<!--<%= link_to('Delete', @post, :method => 'delete', :data => { :confirm => 'Are you sure?' } ) %>-->
+			<!--<%= link_to 'Edit', edit_post_path(@post) %>-->
 		</div>
 
 	</div>
 </div>
-

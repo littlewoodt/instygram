@@ -1,20 +1,18 @@
 <div class="container">
 
-<h2>instantgramme</h2>
+	<h2>instantgramme</h2>
 
-<% if @post.image.present? %>
-	<%= image_tag(@post.image, :class => 'feature') %>
-<% else %>
-	<%= image_tag(@post.image_url, :class => 'feature') %>
-<% end %>
+	<% if @post.image.present? %>
+		<%= image_tag(@post.image, :class => 'feature') %>
+	<% else %>
+		<%= image_tag(@post.image_url, :class => 'feature') %>
+	<% end %>
 
-<p><%= @post.content %></p>
+	<p><%= @post.content %></p>
 
-
-
-<div class="controls">
-	<%= link_to('Delete', @post, :method => 'delete', :data => { :confirm => 'Are you sure?' } ) %>
-	<%= link_to 'Edit', edit_post_path(@post) %>
-</div>
+	<div class="controls">
+		<%= link_to('Delete', @post, :method => 'delete', :data => { :confirm => 'Are you sure?' } ) %>
+		<%= link_to 'Edit', edit_post_path(@post) %>
+	</div>
 
 </div>

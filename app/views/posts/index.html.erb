@@ -7,7 +7,7 @@
 
 <% @posts.each do |post| %>
 	<div class="post" id="post-<%= post.id %>">
-		<h4><%= post.title %></h4>
+		<!--<h4><%= post.user.name if post.user %></h4>-->
 		<% if post.image.present? %>
 			<%= link_to(image_tag(post.image, :class => 'thumb'), post) %>
 		<% else %>

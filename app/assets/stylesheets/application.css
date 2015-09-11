@@ -13,6 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+  background: #fafafa;
+  font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  color: #435051;
+}
+
 .container {
 	max-width: 960px;
 	margin: 0 auto;
@@ -32,7 +39,8 @@
 }
 
 footer {
-	position: fixed;
+	position: relative;
+	height: 20px;
 	left: 0px;
 	bottom: 0px;
 	width: 100%;
@@ -54,3 +62,20 @@ a:hover {
 ul {
 	list-style-type: none;
 }
+
+p {
+	font-size: .8em;
+	line-height: .8em;
+}
+
+h4 {
+	line-height: .5em;
+	font-weight: normal;
+}
+
+.icon {
+	height:; 75px;
+	width: 75px;
+
+}
+

@@ -4,12 +4,12 @@
 	<%= f.text_field :title %>
 </p>-->
 <p>
-	<%= f.label :content %>
-	<%= f.text_field :content %>
+	<%= f.label :content, nil %>
+	<%= f.text_field :content, :placeholder => 'enter your comments' %>
 </p>
 <p>
-	<%= f.label :image %>
-	<%= f.url_field :image %>
+	<%= f.label :image, nil %>
+	<%= f.url_field :image, :placeholder => 'image URL gurl' %>
 </p>
 <p>
 	<%= label_tag "Your image: " %>
@@ -17,8 +17,8 @@
 </p>
 <p>
 <!--	<%= label_tag "Number of Likes: " %>
-	<%= number_field_tag :like_count %>-->
-</p>
+	<%= number_field_tag :like_count %>
+</p>-->
 
 <%= f.submit %>
 <% end %>

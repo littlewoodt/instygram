@@ -2,23 +2,20 @@
 
 	<h2>instantgramme</h2>
 
-</div>
-
-<div class="containerleft">
-
-	<h4>Following:</h4>
+	<h3>Following</h3>
 
 	<% unless @followed.empty? %>
-		<ul>
+	
 
 			<% @followed.each do |relationship| %>
-				<li>
+				<p>
 					<% u = User.find relationship.followed_id %>
+
 					<%= u.name %>
 					<%= link_to "Unfollow User", unfollow_path(u.id) %>
-				</li>
+				</p>
 			<% end %>
-		</ul>
+
 	<% end %>
 
 </div>

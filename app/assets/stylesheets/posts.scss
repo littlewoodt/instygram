@@ -2,12 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  background: #fafafa;
-  font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  color: #435051;
-}
-
 .container {
 	max-width: 960px;
 	margin: 0 auto;
@@ -31,7 +25,7 @@ body {
 
 .windowwhite {
   position: relative;
-  top: -150px;
+  top: -500px;
   background: white;
   width: 300px;
   min-height: 300px;
@@ -49,7 +43,18 @@ body {
 }
 
 .post a {
-	padding: 0;
+	padding: 10px;
+
+}
+
+.post p {
+	padding: 0px 10px;
+
+}
+
+.post h4 {
+	padding: 0px 10px;
+
 }
 
 .post {
@@ -116,7 +121,7 @@ input[type="submit"] {
 	color: #fffff7;
 	width: 25%;
 	height: 25px;
-	padding: 5px;
+	padding: 10px;
 	border-radius: 10px;
 	z-index: 10000;
 	margin: 5px;
@@ -136,8 +141,8 @@ input[type="submit"]:hover {
 
  .postentry {
 	position: relative;
-	margin: 0 auto;
-	bottom: 0px;
+	margin: 40px auto;
+	bottom: 20px;
 	left: 50%;
 	margin-left: -200px;
 	width: 400px;

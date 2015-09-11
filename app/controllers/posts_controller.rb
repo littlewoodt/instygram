@@ -30,7 +30,7 @@ class PostsController < ApplicationController
       redirect_to posts_path
     else
       flash[:message] = "Cant be blank"
-      redirect_to new_post_path
+      redirect_to posts_path
     end
     #flash[:message] = nil   
   end
@@ -40,8 +40,16 @@ class PostsController < ApplicationController
   end
 
   def update
-  	post = Post.find params[:id]
-  	post.update post_params
+    post = Post.find params[:id]
+    if params[:post][:file].present?
+      response = Cloudinary::Uploader.upload params[:post][:file]
+      #post_details = post_params()
+      #post_details[:image_url] = response["url"]
+      post.update :content => params[:post][:content], :image => params[:post][:image], :image_url => response["url"]
+    end
+
+  	#post = Post.find params[:id]
+  	#post.update post_params
   	redirect_to posts_path
   end
 
@@ -63,7 +71,7 @@ class PostsController < ApplicationController
 
   private
   def post_params
-  	params.permit(:title, :image, :content, :user_id, :image_url, :like)
+  	params.permit(:title, :image, :content, :user_id, :image_url, :like, :like_count)
   end
 
 end

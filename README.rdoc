@@ -1,28 +1,36 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+instantgramme 
+- is the photo app you've been waiting for!
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Instantgramme Instructions
+- Register new user
+- Login to home page of posts
+- Post either links or upload pics with your comments
+- Edit posts and delete
+- Follow other users and BE followed * thanks mike : )
+- See all your own posts
+
+
+TECHNOLOGIES
+- Ruby version: 2.2.3p173, Rails * thanks Joel : )
+- Used postgresql to define the datbases * thanks Joel : )
+- Rendered app in browser using RAILS and HEROKU
+- Gems used, cloudinary for image upload * thanks wolf : )
+
+
+APPROACH TAKEN
+- Started with crud and migrations, functions through rails controllers, then views. 
+
+
+KNOWN BUGS
+- Like feature
+- Edit feature is not saving
+
+
+UNSOLVED PROBLEMS
+- A. lot... I wish it was so much better than this
+- UI is deeply unfinished, wanted a lot more but I picked something hard so I would learn as much as I could and practice with css and html and rails
+- It's bad but I'm really happy to have it going.
