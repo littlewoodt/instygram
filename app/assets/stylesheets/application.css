@@ -15,8 +15,9 @@
  */
 
  body {
-  background: #fafafa;
+  background: #f1f1f1; /*#fafafa;*/
   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: 300;
   color: #435051;
 }
 
@@ -71,11 +72,5 @@ p {
 h4 {
 	line-height: .5em;
 	font-weight: normal;
-}
-
-.icon {
-	height:; 75px;
-	width: 75px;
-
 }
 

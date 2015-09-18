@@ -32,7 +32,8 @@
   margin: 0 auto;
   padding-top: 60px;
   padding-bottom: 15px;
-  border-radius: 5px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px #a6a6a6;
 }
 
 .posts {
@@ -110,16 +111,17 @@ input {
 	padding: 5px;
 	border-radius: 5px;
 	color: #435051;
-	background: white;
-	border: 1px inset #435051;
+	background: #fafafa;
+	border: 2px inset #fafafa;
 }
+
 
 input[type="submit"] {
 	font-family: helvetica, sans-serif;
 	border: 0;
-	background: #222222;
+	background: #827fcd; /*#222222;*/
 	color: #fffff7;
-	width: 25%;
+	width: 50%;
 	height: 25px;
 	padding: 10px;
 	border-radius: 10px;
@@ -127,13 +129,6 @@ input[type="submit"] {
 	margin: 5px;
 }
 
-input[type="submit"]:hover {
-	background: black;
-	color: white;
-	transition: all .5s;
-	-webkit-transition: all 1s;
-	-moz-transition: all 1s;
-}
 .windowwhite .gallery img {
 	max-width: 100px;
 	margin: 0 auto;
@@ -151,4 +146,22 @@ input[type="submit"]:hover {
 	background: #435051;
 	text-align: center;
 	border-radius: 5px;
+}
+
+.postentry input {
+	width: 85%;
+	padding: 5px;
+	border-radius: 5px;
+	color: #435051;
+	background: white;
+	border: inset;
+}
+
+.postentry label {
+	display: block;
+	min-width: 16.667%;
+	text-align: center;
+	font-size: .8em;
+	padding: 10px;
+	color: black;
 }

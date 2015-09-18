@@ -9,7 +9,7 @@
 <body>
 
 	<nav>
-		<span id="right"><%= link_to 'Home', '/' %></span>
+		<%= link_to 'Home', '/' %>
 		<% if @current_user.present? %>
 			<%= link_to 'Posts', posts_path %>
 			<!--<%= link_to 'New Post', new_post_path %>-->
